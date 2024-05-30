@@ -1,0 +1,12 @@
+# Ignore o arquivo .env
+.env
+
+# Outros exemplos comuns de arquivos/diretórios para ignorar:
+node_modules/
+dist/
+build/
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
