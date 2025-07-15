@@ -1,7 +1,5 @@
-# Ignore o arquivo .env
 .env
 
-# Outros exemplos comuns de arquivos/diretórios para ignorar:
 node_modules/
 dist/
 build/
@@ -10,3 +8,4 @@ build/
 .env.development.local
 .env.test.local
 .env.production.local
+package-lock.json
