@@ -98,15 +98,14 @@ const Board = () => {
   return (
     <div className='flex flex-col items-center'>
         {gameState.state === "won" && gameState.winner === player ? (
-          <h1 className='text-3xl'>You Won, Congratulations!!</h1>
+          <h1 className='text-3xl mb-4'>You Won, Congratulations!!</h1>
         ) : gameState.state === "won" ? (
-          <h1 className='text-3xl'>Best luck next time, try your revenge</h1>
+          <h1 className='text-3xl mb-4'>Best luck next time, try your revenge</h1>
         ) : gameState.state === "tied" ? (
-          <h1 className='text-3xl'>The game is Tied, play again</h1>
+          <h1 className='text-3xl mb-4'>The game is Tied, play again</h1>
         ) : (
           null
         )}
-        <br />
         <div className='flex'>
             {
               values.slice(0, 3).map((value, idx) => (

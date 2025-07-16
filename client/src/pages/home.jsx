@@ -6,9 +6,13 @@ import { Chat } from 'stream-chat-react';
 import axios from 'axios';
 import { environment } from '../../environment';
 
-const ipv4 = "<your IPv4 address>"; // Replace with your actual IPv4 address
-const localhost = "localhost";
-export const HOST = localhost; // Change to ipv4 if you want to access the app from another device
+/**
+ * Get the hostname from the current URL so that it can be used for API requests
+ * For example, if the URL in the browser is http://localhost:3000, HOST will be 'localhost',
+ * if the URL is http://example.com, HOST will be 'example.com'.
+ * This is useful for making API requests to the backend server from a diferent machine and mantaining the cookies
+ */
+export const HOST = window.location.hostname;
 
 const Home = () => {
   const client = StreamChat.getInstance(environment.api_key);
@@ -35,6 +39,7 @@ const Home = () => {
           id: userId,
           username: username,
           firstName: firstName,
+          name: firstName
         },
         token
       );

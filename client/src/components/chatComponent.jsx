@@ -1,14 +1,18 @@
 import React from 'react'
-import { Window, MessageList, MessageInput  } from 'stream-chat-react'
+import { Window, MessageList, MessageInput, ChannelHeader  } from 'stream-chat-react'
+import { CustomInputComponent } from './costumMessageInput'
+
 
 const ChatComponent = () => {
   return (
-    <div className='bg-red-700'>
-        <Window>
-            {<MessageList disableDateSeparator hideDeletedMessages closeReactionSelectorOnClick messageActions={["react"/* , "delete"*/]}/> }
-            <MessageInput noFiles/>
-        </Window>
-    </div>
+        <div className='w-96 h-full'> 
+          <Window>
+                <ChannelHeader />
+                <MessageList hideDeletedMessages />
+
+                <MessageInput noFiles />
+          </Window>
+        </div>
   )
 }
 

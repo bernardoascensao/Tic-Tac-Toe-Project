@@ -18,18 +18,19 @@ const WaitingPage = ({ logout }) => {
                 return;
             }
     
-            const newChannel = client.channel("messaging", {
+            const newChannel = client.channel("messaging", 'tictac-chat', {
+                name: "Tictac Chat",
                 members: [client.userID, response.users[0].id],
             });
 
             setLoading(true);
 
-            // Monitora o canal para eventos ao vivo
+            // Watches the channel for live events
             await newChannel.watch();
 
             if(newChannel.state.watcher_count === 2){ setLoading(false); setChannel(newChannel); }
 
-            // Escuta o evento `member.added` para saber quando o oponente se juntar
+            // Listens to the `user.watching.start` event to know when the opponent joins
             newChannel.on("user.watching.start", (event) => {
                 if (event.user.id === response.users[0].id) {
                     setLoading(false);

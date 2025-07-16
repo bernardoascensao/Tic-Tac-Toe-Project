@@ -53,6 +53,21 @@ module.exports = {
                 target: 'http://localhost:3001',
                 changeOrigin: true,
                 secure: false,
+
+                // onProxyReq: (proxyReq, req, res) => {
+                //     const fullUrl = `http://${req.headers.host}${req.url}`;
+                //     console.log(`[ProxyReq] ${req.method} ${fullUrl}`);
+                // },
+
+                // Log when a response is received from the target
+                // onProxyRes: (proxyRes, req, res) => {
+                //     // console.log(`[ProxyRes] ${req.method} ${req.url} → ${proxyRes.statusCode}`);
+                // },
+
+                // Optional: handle proxy errors
+                // onError(err, req, res) {
+                //     console.error(`[ProxyError] ${req.method} ${req.url}:`, err.message);
+                // }
             },
         ],
     },

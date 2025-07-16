@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/home';
 import React from 'react';
+import 'stream-chat-react/dist/css/v2/index.css';
 
 const App = () => {
   return (
