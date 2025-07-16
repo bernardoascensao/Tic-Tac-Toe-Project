@@ -24,8 +24,8 @@ This project uses the [GetStream](https://getstream.io/) API for real-time chat.
 3. Create a `.env` file inside the `server/` folder with the following content:
 
 ```env
-STREAM_API_KEY=your_api_key_here
-STREAM_API_SECRET=your_api_secret_here
+API_KEY=your_api_key_here
+API_SECRET=your_api_secret_here
 NODE_ENV=development
 ```
 

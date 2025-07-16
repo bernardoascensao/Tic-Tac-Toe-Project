@@ -1,7 +1,6 @@
 import { Channel, useChatContext } from 'stream-chat-react';
 import React, { useState } from 'react';
 import GamePage from './gamePage';
-import Cookies from 'js-cookie';
 
 
 const WaitingPage = ({ logout }) => {
@@ -53,7 +52,7 @@ const WaitingPage = ({ logout }) => {
                     <div className='flex flex-col items-center gap-2'>
                         <label className='text-5xl'>Waiting Room</label>
                         <br/>
-                        <p>Your username: <b>{Cookies.get("username")}</b></p>
+                        <p>Your username: <b>{client._user.username}</b></p>
                         <input
                             id="opponent-username"
                             className='p-1 rounded-md'
